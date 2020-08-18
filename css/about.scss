@@ -39,10 +39,9 @@ a{
     color: white;
     text-decoration: none;
 }
-.home {
+.about {
     background: radial-gradient(#525252,#131313);
 }
-
 .nav-container{
     background: rgb(7,7,7);
     position: sticky;
@@ -61,7 +60,7 @@ nav{
     ul{
         display: flex;
         justify-content: space-between;
-        flex: 2;
+        flex: 3;
         list-style: none;
     }
     #logo{
@@ -85,103 +84,31 @@ nav{
         padding: 1rem 2rem;
         border-radius: 2rem;
     }
-}.showcase{
+}.aboutus{
         display: grid;
         min-height: 90vh;
         grid-template-columns: 10% repeat(3,minmax(5rem, 1fr)) 10%;
         grid-template-rows: 1fr 2fr 1fr;
         h2{
             grid-column: 2/3;
-            align-self: flex-end;
+            align-self: stretch;
         }
         img{
             grid-row: 2/3;
-            grid-column: 3/4;
-            height: 100%;
+            grid-column: 4/5;
+            height: 90%;
             object-fit: cover;
             align-self: center;
             justify-self: center;
         }
-        .info{
-            grid-column: 4/5;
-            grid-row: 3/4;
+        .desc{
+            grid-column: 2/3;
+            grid-row: 2/3;
         }
-        h3{
+        p{
             padding-bottom: 3rem;
         }
 }
-.features-container{
-    background: #323232;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    .wave{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: -1;
-    }
-}
-.features{
-    min-height: 90vh;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-self: space-around;
-    .cards{
-        display: flex;
-        justify-content: space-between;
-        color: black;
-        .card{
-            background: white;
-            margin: 0rem 3rem;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            border-radius: 2rem;
-            h4{
-                margin: 2rem 0rem 1rem 0rem;
-            }
-            p{
-                padding: 2rem;
-            }
-            img{
-                object-fit: cover;
-            }
-        }
-    }
-}
-
-.soon{
-    background: radial-gradient(#525252,#131313);
-    min-height: 80vh;
-    position: relative;
-    img,h2{
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 60%;
-    }h2{
-        top: 30%;
-    }
-}
-
-.footer{
-    min-height: 10vh;
-    background: black;
-    padding-left: 10%;
-    padding-right: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    h2{
-        flex: 3;
-    }
-}
-
 @media screen and (max-width: 1200px) {
     html {
       font-size: 50%;
@@ -192,47 +119,20 @@ nav{
       }
       ul {
         li {
-          margin-left: 3rem;
+          margin-left: 1.85rem;
         }
       }
     }
-    .showcase {
+    .aboutus {
       grid-template-columns: 10% 1fr 10%;
       img {
         width: 100%;
         object-fit: contain;
       }
-      img,
       h2,
-      .info {
+      .desc {
         grid-column: 2/3;
         text-align: center;
       }
     }
-    .features{
-        align-items: center;
-        h2{
-            margin-top: 5rem;
-        }
-        .cards{
-            flex-direction: column;
-            width: 100%;
-            .card{
-                margin: 5rem 0rem;
-            }
-        }
-    }
-    .soon{
-        overflow: hidden;
-        img{
-            width: 60%;
-        }
-        h2{
-          font-size: 5rem;
-          text-align: center;  
-        }
-    }
 }
-
-
-
